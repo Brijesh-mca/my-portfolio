@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <title>portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background: linear-gradient(to right, white, rgb(159, 170, 196));
+            --my-color: #8750f7;
+            --mycolor1: #2a1454;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, var(--my-color) 0%, var(--mycolor1) 100%);
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 45px;
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, var(--my-color) 0%, var(--mycolor1) 100%);
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, var(--my-color) 0%, var(--mycolor1) 100%);
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        p {
+            font-family: sans-serif;
+            font-size: 20px;
+
+        }
+
+        .cardHover {
+            background: linear-gradient(var(--my-color), var(--mycolor1));
+            color: wheat;
+        }
+
+        .cardHover:hover {
+            color: rgb(229, 229, 229)
+        }
+
+        .myCard {
+            border-radius: 25px;
+        }
+
+        .myCard:hover {
+            background: linear-gradient(var(--my-color), var(--mycolor1));
+            color: rgb(236, 236, 236);
+
+        }
+
+
+
+
+        .boxx {
+            width: 190px;
+            height: 254px;
+            background: linear-gradient(var(--my-color), var(--mycolor1));
+            border-radius: 15px;
+            box-shadow: 1px 5px 60px 0px #100a886b;
+        }
+
+        .boxx .boxx-border-top {
+            width: 60%;
+            height: 3%;
+            background: #6b64f3;
+            margin: auto;
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        .boxx span {
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            display: block;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .boxx .job {
+            font-weight: 400;
+            color: white;
+            display: block;
+            text-align: center;
+            padding-top: 3px;
+            font-size: 20px;
+        }
+
+        .boxx .img {
+            width: 100px;
+            height: 100px;
+            background: #bfbdba;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .boxx button {
+            padding: 8px 25px;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+            border: none;
+            margin-top: 30px;
+            background: #6b64f3;
+            color: white;
+            font-weight: 600;
+        }
+
+        .boxx button:hover {
+            background: #534bf3;
+        }
+
+        /* From Uiverse.io by Smit-Prajapati */
+        .orange {
+            color: #ff7a01;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 30px;
+            background-color: #001925;
+            padding: 30px;
+            border-left: 5px solid #ff7a01;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .heading {
+            display: block;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .form-container .form .input {
+            color: #87a4b6;
+            width: 100%;
+            background-color: #002733;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+            border-left: 1px solid transparent;
+        }
+
+        .form-container .form .input:focus {
+            border-left: 5px solid #ff7a01;
+        }
+
+        .form-container .form .textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: #013747;
+            color: #ff7a01;
+            font-weight: bold;
+            resize: none;
+            max-height: 150px;
+            margin-bottom: 20px;
+            border-left: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-container .form .textarea:focus {
+            border-left: 5px solid #ff7a01;
+        }
+
+        .form-container .form .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-container .form .button-container .send-button {
+            flex-basis: 70%;
+            background: #ff7a01;
+            padding: 10px;
+            color: #001925;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-container .form .button-container .send-button:hover {
+            background: transparent;
+            border: 1px solid #ff7a01;
+            color: #ff7a01;
+        }
+
+        .form-container .form .button-container .reset-button-container {
+            filter: drop-shadow(1px 1px 0px #ff7a01);
+            flex-basis: 30%;
+        }
+
+        .form-container .form .button-container .reset-button-container .reset-button {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            color: #ff7a01;
+            font-weight: bold;
+            background: #001925;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-container .form .button-container .reset-button-container .reset-button:hover {
+            background: #ff7a01;
+            color: #001925;
+        }
+
+        ul li {
+            font-size: 16px;
+            font-family: serif;
+            margin-left: 12px;
+            margin-right: 6px;
+            font-weight: 700;
+
+
+
+        }
+
+
+        .myText {
+            display: flex;
+            height: 200px;
+            align-items: flex-end;
+        }
+
+        .myText div {
+            font-weight: 700;
+            font-family: sans-serif;
+            font-size: 16px;
+
+        }
+
+        .myLink {
+            transition: 0.3s;
+            background: linear-gradient(var(--my-color), var(--mycolor1));
+            border-radius: 20px;
+            padding-left: 18px !important;
+            padding-right: 18px !important;
+            color: white;
+        }
+
+        .myLink:hover {
+            background: linear-gradient(var(--my-color), var(--mycolor1));
+            border-radius: 25px;
+            padding-left: 25px !important;
+            padding-right: 20px !important;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-size: 30px; font-weight: 700; font-family: serif;">Brijesh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active myLink" aria-current="page" href="#myhome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link myLink" href="#Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link myLink" href="#contact">Contact_us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link myLink" href="#Skills">Skills</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container " style="padding-top: 100px; " id="myhome">
+        <div class="row align-items-center">
+
+            <div class="col-xs-12 mx-auto col-sm-6 textone" id="ani1">
+                <span style="font-weight: 800; font-size: 30px;">I am Brijesh</span>
+                <h1>Web Developer + UX Designer</h1>
+                <p>I break down complex user experience problems to create integrity focussed solutions that connect
+                    billions of people</p>
+                <div class="button-box d-flex flex-wrap align-items-center">
+                    <a href="Asests/CV-Brijesh-2.docx" class="btn " style="background-color: var(--my-color);">Download CV</a>
+                </div>
+            </div>
+            <div class="col-6  mx-auto p-5" style="width: 450px;" id="ani2">
+                <img src="Asests/myPic.jpg" class="img-fluid rounded mx-auto d-block" alt="...">
+            </div>
+        </div>
+
+        <div class="row " style="padding-top: 100px;" id="Services">
+            <div class="col">
+                <h1 class="text-center">My Quality Services</h1>
+                <p class="text-center">We put your ideas and thus your wishes in the form of a unique web project that
+                    <br> inspires you and you
+                    customers.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 100px;">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item cardHover">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <h3 class="text-center">FRONT-END DEVELOPER</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>FRONT-END DEVELOPER</strong><br> Front-end web development is the development of the
+                            graphical user interface of a website through the use of HTML, CSS, and JavaScript so users
+                            can view and interact with that website.
+                            <code>Brijesh Portfolio</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item cardHover">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            <h3 class="text-center">WEB DEVELOPER</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>WEB DEVELOPER</strong><br> A web developer is a programmer who develops World Wide
+                            Web applications using a client–server model. The applications typically use HTML, CSS, and
+                            JavaScript in the client, and any general-purpose programming language in the server. HTTP
+                            is used for communications between client and server. A web developer may specialize in
+                            client-side applications, server-side applications, or both.
+                            <code>Brijesh Portfolio</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item cardHover">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            <h3 class="text-center">WEB DESIGNER</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>WEB DESIGNER</strong><br> Web design encompasses many different skills and
+                            disciplines in the production and maintenance of websites. The different areas of web design
+                            include web graphic design;
+                            <code>Brijesh Portfolio</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row " style="padding: 100px 0px 100px 0px;">
+
+            <div class="col-md-6 col-sm-12 " id="experience">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">My Experience
+                        </h2>
+                    </div>
+                    <div class="col-12 my-5">
+                        <div class="card text-end myCard">
+
+                            <div class="card-body">
+                                <h3 class="card-title">2024 - Present</h3>
+                                <h4>Web Developer</h4>
+                                <p class="card-text">Searching jobs</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 my-3 ">
+                        <div class="card text-end myCard">
+
+                            <div class="card-body">
+                                <h3 class="card-title">2023-2024</h3>
+                                <h4>Front-end Developer</h4>
+                                <p class="card-text">Hyper Net solutions Pvt. Ltd.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12" id="Education">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">My Education </h2>
+                    </div>
+                    <div class="col-12 my-5">
+                        <div class="card text-end myCard">
+
+                            <div class="card-body">
+                                <h3 class="card-title">2022-2024</h3>
+                                <h4> Master of Computer Application</h4>
+                                <p class="card-text">Institute of Computer Science & Technology, SHEPA</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 my-3 ">
+                        <div class="card text-end myCard">
+
+                            <div class="card-body">
+                                <h3 class="card-title">2019-2022</h3>
+                                <h4> Bachelor of Computer Application</h4>
+                                <p class="card-text">Rajarshi School of Management & Technology - RSMT</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="row ">
+            <div class="col  ">
+                <div class="row">
+                    <h2 class="text-center">My Skills</h2>
+                    <p class="text-center">We put your ideas and thus your wishes in the form of a unique web project
+                        that
+                        <br> inspires you and you
+                        customers.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    <div class="container" id="Skills">
+
+        <div class="row my-5  mx-5  row-cols-xs-1 row-cols-md-3">
+            <div class="col my-5  ">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-html-logo-96.png" alt="">
+                    </div>
+                    <span> 90%</span>
+                    <h4 class="job">HTML</h4>
+
+                </div>
+
+            </div>
+
+            <div class="col my-5">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-css-logo-96.png" alt="">
+                    </div>
+                    <span> 90%</span>
+                    <h4 class="job">CSS</h4>
+
+                </div>
+
+            </div>
+
+
+            <div class="col my-5">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-javascript-96.png" alt="">
+                    </div>
+                    <span> 85%</span>
+                    <h4 class="job">JavaScript</h4>
+
+                </div>
+
+            </div>
+
+            <div class="col my-3">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-react-80.png" alt="">
+                    </div>
+                    <span> 78%</span>
+                    <h4 class="job">React-Js</h4>
+
+                </div>
+
+            </div>
+            <div class="col my-2">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-wordpress-96.png" alt="">
+                    </div>
+                    <span> 85%</span>
+                    <h4 class="job">React-Js</h4>
+
+                </div>
+
+            </div>
+            <div class="col my-2">
+                <div class="boxx">
+                    <div class="boxx-border-top">
+                    </div>
+                    <div class="img">
+                        <img src="Asests/icons8-mysql-logo-96.png" alt="">
+                    </div>
+                    <span> 80%</span>
+                    <h4 class="job">MySql</h4>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container" id="contact">
+        <div class="row">
+            <div class="col-sm-7 col-">
+                <div class="form-container">
+                    <div class="form">
+                        <span class="heading">Get in touch</span>
+                        <input placeholder="Name" type="text" class="input">
+                        <input placeholder="Email" id="mail" type="email" class="input">
+                        <textarea placeholder="Say Hello" rows="10" cols="30" id="message" name="message"
+                            class="textarea"></textarea>
+                        <div class="button-container">
+                            <div class="send-button">Send</div>
+                            <div class="reset-button-container">
+                                <div id="reset-btn" class="reset-button">Reset</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-5 col d-flex  align-items-center ">
+
+                <div class="row mybox2  mx-5">
+                    <div class="col-auto">
+                        
+                        <h6><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone-vibrate" viewBox="0 0 16 16">
+                            <path d="M10 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM6 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+                            <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2M1.599 4.058a.5.5 0 0 1 .208.676A7 7 0 0 0 1 8c0 1.18.292 2.292.807 3.266a.5.5 0 0 1-.884.468A8 8 0 0 1 0 8c0-1.347.334-2.619.923-3.734a.5.5 0 0 1 .676-.208m12.802 0a.5.5 0 0 1 .676.208A8 8 0 0 1 16 8a8 8 0 0 1-.923 3.734.5.5 0 0 1-.884-.468A7 7 0 0 0 15 8c0-1.18-.292-2.292-.807-3.266a.5.5 0 0 1 .208-.676M3.057 5.534a.5.5 0 0 1 .284.648A5 5 0 0 0 3 8c0 .642.12 1.255.34 1.818a.5.5 0 1 1-.93.364A6 6 0 0 1 2 8c0-.769.145-1.505.41-2.182a.5.5 0 0 1 .647-.284m9.886 0a.5.5 0 0 1 .648.284C13.855 6.495 14 7.231 14 8s-.145 1.505-.41 2.182a.5.5 0 0 1-.93-.364C12.88 9.255 13 8.642 13 8s-.12-1.255-.34-1.818a.5.5 0 0 1 .283-.648"/>
+                          </svg> Phone</h6>
+                        <h4>+01 123 654 8096</h4>
+
+                    </div>
+                    <div class="col-auto">
+                        <h6> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                                <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                              </svg>
+                            Email</h6>
+                        <h4>ibrijesh.mca@gmail.com</h4>
+
+                    </div>
+                    <div class="col-auto">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                              </svg>
+                            Address</h6>
+                        <h4>Varanasi,UP</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"
+                style="background:linear-gradient(var(--my-color), var(--mycolor1)); height: 300px;width: 100%; ">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">BRIJESH</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+
+                            <div class="col 3"></div>
+                            <div class="col 3">
+
+                                <div class="row text-white myText">
+                                    <div class="col">Services.
+                                    </div>
+                                    <div class="col">Works.</div>
+                                    <div class="col">Skills.</div>
+                                    <div class="col">Experience.</div>
+                                </div>
+
+                            </div>
+                            <div class="col 3"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6 class="text-center">© 2024 All Rights Reserved by Brijesh</h6>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
