@@ -37,4 +37,45 @@ gsap.from("#Skills",{
     delay:0.6,
     scrollTrigger:"#Skills"
 })
-
+gsap.from("#one",{
+    scale:0,
+    x:-200,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#one"
+})
+gsap.from("#two",{
+    scale:0,
+    y:100,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#two"
+})
+gsap.from("#three",{
+    scale:0,
+    x:200,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#three"
+})
+gsap.from("#four",{
+    scale:0,
+    x:200,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#four"
+})
+gsap.from("#five",{
+    scale:0,
+    y:-100,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#five"
+})
+gsap.from("#six",{
+    scale:0,
+    x:-200,
+    duration:1,
+    delay:0.6,
+    scrollTrigger:"#six"
+})
