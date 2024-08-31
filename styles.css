@@ -5,7 +5,22 @@
     box-sizing: border-box;
 
 }
+.myLink {
+  transition: 0.3s;
+  background: linear-gradient(var(--my-color), var(--mycolor1)) !important;
+  border-radius: 20px;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  color: white;
+}
+.myLink:hover {
+  background: linear-gradient(var(--my-color), var(--mycolor1));
+  border-radius: 25px;
+  padding-left: 25px !important;
+  padding-right: 20px !important;
+  color: white !important;
 
+}
 body {
 background: linear-gradient(to right, white, rgb(159, 170, 196)) !important;
     --my-color: #8750f7;
@@ -96,7 +111,17 @@ h3 {
 
     -webkit-text-fill-color: transparent;
 }
+ul li {
+  color: azure !important;
+  font-size: 16px;
+  font-family: serif;
+  margin-left: 12px;
+  margin-right: 6px;
+  font-weight: 700;
 
+
+
+}
 
 p {
     font-family: sans-serif;
