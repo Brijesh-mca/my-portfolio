@@ -18,6 +18,35 @@
             box-sizing: border-box;
 
         }
+        select{
+            background-color: transparent;
+            padding: 0 10px;
+            color: wheat;
+            border-radius: 12px;
+        }
+      
+
+        body:has(option[value="dark"]:checked) {
+            color: #d3d3d3 ;
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(9, 9, 9));
+         
+        }
+        .accordion:has(option[value="dark"]:checked) {
+            color: #d3d3d3 ;
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(9, 9, 9));
+         
+        }
+     
+
+        .myName{
+            font-weight: 700;
+            -webkit-text-fill-color: transparent;
+           
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, var(--my-color) 0%, var(--mycolor1) 100%);
+            background-clip: text; 
+        }
+     
 
         body {
             background: linear-gradient(to right, white, rgb(159, 170, 196));
@@ -32,9 +61,11 @@
             font-family: sans-serif;
             background-image: linear-gradient(to right, var(--my-color) 0%, var(--mycolor1) 100%);
             background-clip: text;
-
+       
             -webkit-text-fill-color: transparent;
         }
+        
+      
 
         h2 {
             font-weight: 700;
@@ -81,8 +112,15 @@
             color: rgb(236, 236, 236);
 
         }
-
-
+.Profile img{
+    filter:drop-shadow( 4px 4px 8px var(--mycolor1));
+    border-radius: 8px;
+}
+.Profile img:hover{
+   box-shadow:4px 4px 8px var(--mycolor1) ;
+   rotate: 5deg;
+   
+}
 
 
         .boxx {
@@ -148,7 +186,6 @@
             background: #534bf3;
         }
 
-        /* From Uiverse.io by Smit-Prajapati */
         .orange {
             color: #ff7a01;
         }
@@ -296,9 +333,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#" style="font-size: 30px; font-weight: 700; font-family: serif;">Brijesh</a>
+            <a class="navbar-brand" href="#" style="font-size: 30px; font-weight: 700; font-family: serif;"><span class="myName">Brijesh</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -306,6 +343,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active myLink" aria-current="page" >
+                            <select name="" id="">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active myLink" aria-current="page" href="#myhome">Home</a>
                     </li>
@@ -327,6 +372,7 @@
             </div>
         </div>
     </nav>
+   
 
     <div class="container " style="padding-top: 100px; " id="myhome">
         <div class="row align-items-center">
@@ -341,8 +387,8 @@
                         style="background-color: var(--my-color);">Download CV</a>
                 </div>
             </div>
-            <div class="col-6  mx-auto p-5" style="width: 450px;" id="ani2">
-                <img src="Asests/myPic.jpg" class="img-fluid rounded mx-auto d-block" alt="...">
+            <div class="col-6 Profile mx-auto p-5" style="width: 450px;" id="ani2">
+                <img  src="Asests/myPic-removebg-preview.png" class="img-fluid rounded mx-auto d-block" alt="...">
             </div>
         </div>
 

@@ -5,6 +5,7 @@
     box-sizing: border-box;
 
 }
+
 .myLink {
   transition: 0.3s;
   background: linear-gradient(var(--my-color), var(--mycolor1)) !important;

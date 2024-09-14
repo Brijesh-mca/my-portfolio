@@ -1,19 +1,19 @@
 gsap.from("#ani1",{
     x:-600,
     duration:1,
-    delay:1
+    delay:0.5
 });
 
 gsap.from("#ani2",{
     x:600,
     duration:2,
-    delay:1
+    delay:0.5
 })
 
 gsap.from("#Services",{
     scale:0,
     duration:1,
-    delay:1,
+    delay:0.5,
     scrollTrigger:"#Services"
 })
 
