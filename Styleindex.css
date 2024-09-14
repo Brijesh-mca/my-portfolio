@@ -1,0 +1,36 @@
+@media (max-width:991px) {
+    h1{
+        font-size: 40px !important;
+        font-weight: 900;
+    }
+    body {
+        background: linear-gradient(to right,#6e599b80, rgb(255, 255, 255));
+  
+     
+    }
+}
+@media (max-width:600px) {
+    h1{
+        font-size: 30px !important;
+        margin: 0 10px;
+        font-weight: 900;
+    }
+    .textone span{
+        font-size: 22px;
+        margin: 0px 10px;
+
+    }
+    .textone p{
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .textone a{
+        margin: 10px 10px;
+    }
+    
+    body {
+        background: linear-gradient(to right,#7543d93f, rgb(255, 255, 255));
+        
+        
+    }
+}
