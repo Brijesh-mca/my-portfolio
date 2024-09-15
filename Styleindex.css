@@ -21,7 +21,8 @@
 
     }
     .myCard{
-        margin: 0 30px;
+        margin: 0 auto;
+        border-radius: 10pz;
     }
     h2{
         font-size: 28px !important;
