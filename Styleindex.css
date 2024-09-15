@@ -68,6 +68,67 @@ body{
       background: rgba(39, 85, 223, 0.393);
     } 
   }
+  
+  /* Star designing */
+  .My-star span{
+    position: absolute;
+    width: 30px;  
+    aspect-ratio: 1;
+    opacity: .3;
+    background: #F8CA00;
+    clip-path: polygon(50% 0,
+      calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+      calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+     ); 
+     animation: starAni 2.5s linear infinite;
+  }
+  .My-star span:nth-child(2){
+    top: 70vh;
+    left: 60vw;
+    animation-delay: 0.5s;
+  }
+  .My-star span:nth-child(3){
+    top: 80vh;
+    left: 800vw;
+    animation-delay: 1.3s;
+  }
+  .My-star span:nth-child(4){
+    top: 30vh;
+    right: 90vw;
+    animation-delay: 1.9s;
+  }
+  .My-star span:nth-child(5){
+    top: 38vh;
+    left: 30vw;
+    animation-delay: 0.5s;
+  }
+  .My-star span:nth-child(6){
+    top: 55vh;
+    left: 50vw;
+    animation-delay: 3s;
+  }
+  .My-star span:nth-child(7){
+    top: 50vh;
+    left: 10vw;
+    animation-delay: 1.5s;
+  }
+  @keyframes starAni {
+    0%{
+      transform: scale(0);
+      opacity: 1;
+    }  
+    100%{
+      transform: scale(3);
+      
+      
+      opacity: 0;
+      background: rgba(39, 85, 223, 0.393);
+    } 
+  }
+
+
 
 @media (max-width:600px) {
     h1{
