@@ -20,7 +20,17 @@
         margin: 0px 10px;
 
     }
-    .textone p{
+    .myCard{
+        margin: 0 30px;
+    }
+    h2{
+        font-size: 28px !important;
+    }
+ 
+     h3{
+        font-size: 1.5rem !important;
+     }
+    p{
         margin: 0 10px;
         font-size: 16px;
     }
